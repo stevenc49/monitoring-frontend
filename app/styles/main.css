@@ -26,6 +26,15 @@ body {
 
 .dashboardheader {
   background-color: #d2d2c6;
+  border-bottom: 1px solid #000000;
+}
+
+.dashboardHeaderLeft {
+  float: left;
+}
+
+.dashboardHeaderRight {
+  text-align: right;
 }
 
 /* Custom page footer */
