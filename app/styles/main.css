@@ -24,6 +24,10 @@ body {
   padding-bottom: 19px;
 }
 
+.dashboardheader {
+  background-color: #d2d2c6;
+}
+
 /* Custom page footer */
 .footer {
   padding-top: 19px;
