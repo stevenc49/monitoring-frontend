@@ -2,7 +2,7 @@
 
 <div id="dashboardHeader" class="dashboardheader">
 
-  <!-- Dashboard Headr -->
+  <!-- Dashboard Header -->
   <span height="50px">
     <div class="dashboardHeaderLeft">
       <img src="images/meter_icon.png" alt="dashboard">
@@ -24,6 +24,13 @@
   <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
 </div>
 
+<div ng-app='epermitjsApp' ng-controller='DashboardCtrl'>
+  <ui>
+      <li ng-repeat='app in applications'>{{app}}</li>
+  </ul>
+</div>
+
+
 <div class="row marketing">
   <h4>HTML5 Boilerplate</h4>
   <p>
@@ -38,3 +45,4 @@
   <h4>Karma</h4>
   <p>Spectacular Test Runner for JavaScript.</p>
 </div>
+
