@@ -8,21 +8,21 @@ angular.module('epermitjsApp')
         revId: 0,
         status: null,
         activity: 'Well',
-        proponents: "test1"
+        proponent: "test1"
       },
       {
         appId: 2,
         revId: 0,
         status: null,
         activity: 'Pipeline',
-        proponents: "test2"
+        proponent: "test2"
       },
       {
         appId: 3,
         revId: 0,
         status: null,
         activity: 'Well, Pipeline',
-        proponents: "test3"
+        proponent: "test3"
       }
     ];
 
@@ -31,5 +31,5 @@ $scope.users = [{name: "Moroni", age: 50},
                 {name: "Jacob", age: 27},
                 {name: "Nephi", age: 29},
                 {name: "Enos", age: 34}];
-    
+
   });

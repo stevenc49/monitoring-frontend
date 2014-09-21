@@ -15,45 +15,17 @@
 
 </div>
 
-<div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
-  <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
-  </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
-</div>
-
 <!-- Applications Table -->
 <div ng-app='epermitjsApp' ng-controller='DashboardCtrl'>
-  <ui>
-      <li ng-repeat='app in applications'>{{app.appId}} {{app.revId}}  {{app.status}} {{app.activity}} {{app.proponents}}</li>
-  </ul>
 
     <table ng-table class="table">
-    <tr ng-repeat="user in users">
-        <td data-title="'Name'">{{user.name}}</td>
-        <td data-title="'Age'">{{user.age}}</td>
+    <tr ng-repeat="app in applications">
+        <td data-title="'Application'">{{app.appId}}</td>
+        <td data-title="'Revision Num'">{{app.revId}}</td>
+        <td data-title="'Status'">{{app.status}}</td>
+        <td data-title="'Activity'">{{app.activity}}</td>
+        <td data-title="'Proponent'">{{app.proponent}}</td>
     </tr>
     </table>
-  
+
 </div>
-
-
-
-
-<div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
-  <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-  </p>
-
-  <h4>Angular</h4>
-  <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
-  </p>
-
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
-</div>
-
