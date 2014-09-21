@@ -29,7 +29,17 @@
   <ui>
       <li ng-repeat='app in applications'>{{app.appId}} {{app.revId}}  {{app.status}} {{app.activity}} {{app.proponents}}</li>
   </ul>
+
+    <table ng-table class="table">
+    <tr ng-repeat="user in users">
+        <td data-title="'Name'">{{user.name}}</td>
+        <td data-title="'Age'">{{user.age}}</td>
+    </tr>
+    </table>
+  
 </div>
+
+
 
 
 <div class="row marketing">
