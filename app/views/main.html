@@ -1,31 +1,32 @@
 
 
-<div id="dashboardHeader" class="dashboardheader">
-
-  <!-- Dashboard Header -->
-  <span height="50px">
-    <div class="dashboardHeaderLeft">
-      <img src="images/meter_icon.png" alt="dashboard">
-      Dashboard
-    </div>
-    <div class="dashboardHeaderRight">         
-      <a ng-href="#"><img src="images/bc_oil_gas_commission_logo.png" alt="dashboard"><br></a>
-    </div>
-  </span>
-
-</div>
-
 <!-- Applications Table -->
-<div ng-app='epermitjsApp' ng-controller='DashboardCtrl'>
+<div ng-app='epermitjsApp' ng-controller='MainCtrl'>
 
-    <table ng-table class="table">
-    <tr ng-repeat="app in applications">
-        <td data-title="'Application'">{{app.appId}}</td>
-        <td data-title="'Revision Num'">{{app.revId}}</td>
-        <td data-title="'Status'">{{app.status}}</td>
-        <td data-title="'Activity'">{{app.activity}}</td>
-        <td data-title="'Proponent'">{{app.proponent}}</td>
+    <table ng-table class="table" >
+    <tr ng-repeat="service in services">
+        <td data-title="'Name'" style="text-align: left">{{service.name}}</td>
+        <td data-title="'Status'" ng-switch='service.status'>
+          <div ng-switch-when='OK'>
+            <img src="images/green_circle.png">
+          </div>
+          <div ng-switch-when='NOK'>
+            <img src="images/red_circle.png">
+          </div>
+          <div ng-switch-when='CHECKING'>
+            <img src="images/yellow_circle.png">
+          </div>
+        </td>
+        <td data-title="'Last Updated'">{{service.lastUpdated}}</td>
+        <td data-title="'Check Now'"><button>Check Now</button></td>
     </tr>
     </table>
+
+    <div class='legend'>
+        <img src="images/green_circle.png"> Online
+        <img src="images/yellow_circle.png"> Checking
+        <img src="images/red_circle.png"> Offline
+    </div>
+
 
 </div>

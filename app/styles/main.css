@@ -90,3 +90,11 @@ body {
     border-bottom: 0;
   }
 }
+
+.td {
+  text-align: center;
+}
+
+.ng-table-pager {
+    display: none;
+}

@@ -22,22 +22,19 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="container-fluid">
+    <div class="container">
       <div class="header">
         <ul class="nav nav-pills pull-right">         
-          <li><a ng-href="#"><img src="images/meter_icon.png" alt="dashboard"><br></a></li>
-          <li><a ng-href="#"><img src="images/int_sig_icon.png" alt="help"></a></li>
-          <li><a ng-href="#"><img src="images/printer_icon.png" alt="print"></a></li>
-          <li><a ng-href="#">Barry McPeake<br/>admin</a></li>
-          <li><a ng-href="#">Log Out</a></li>
+          <li class="active"><a ng-href="#">Overview</a></li>
+          <li><a ng-href="#/about">Settings</a></li>
         </ul>
-        <h3 class="text-muted"><font color="green">e</font><font color="navy">Permit</font></h3>
+        <h3 class="text-muted">Monitoring Tool</h3>
       </div>
 
       <div ng-view=""></div>
 
       <div class="footer">
-        <p><span class="glyphicon glyphicon-globe"></span> A rewrite of ePermit</p>
+        <p><span class="glyphicon glyphicon-globe"></span> Monitoring Tool</p>
       </div>
     </div>
 

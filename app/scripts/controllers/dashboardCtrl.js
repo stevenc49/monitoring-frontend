@@ -8,21 +8,14 @@ angular.module('epermitjsApp')
         revId: 0,
         status: null,
         activity: 'Well',
-        proponent: "test1"
+        proponent: 'test1'
       },
       {
         appId: 2,
         revId: 0,
         status: null,
         activity: 'Pipeline',
-        proponent: "test2"
-      },
-      {
-        appId: 3,
-        revId: 0,
-        status: null,
-        activity: 'Well, Pipeline',
-        proponent: "test3"
+        proponent: 'test2'
       }
     ];
 
