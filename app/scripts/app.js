@@ -8,8 +8,9 @@
  *
  * Main module of the application.
  */
-angular
-  .module('epermitjsApp', [
+
+//var app = angular.module('epermitjsApp', [])
+angular.module('epermitjsApp', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
@@ -28,7 +29,13 @@ angular
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
       })
+      .when('/workflows', {
+        templateUrl: 'views/workflows.html',
+        controller: 'WorkflowsCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
-  });
+  }
+);
+

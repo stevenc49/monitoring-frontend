@@ -1,0 +1,40 @@
+
+
+<!-- Applications Table -->
+<div ng-app='epermitjsApp' ng-controller='WorkflowsCtrl'>
+
+    <table ng-table class="table" >
+    <tr ng-repeat="workflow in workflows">
+
+        <!-- Workflow -->
+        <td data-title="'Workflow'" style="text-align: left">
+            <a href="{{workflow.url}}">{{workflow.name}}</a>
+        </td>
+
+
+        <!-- Status -->
+        <td data-title="'Status'" ng-switch='workflow.status'>
+          <div ng-switch-when='OK'>
+            <img src="images/green_circle.png">
+          </div>
+          <div ng-switch-when='NOK'>
+            <img src="images/red_circle.png">
+          </div>
+          <div ng-switch-when='CHECKING'>
+            <img src="images/yellow_circle.png">
+          </div>
+        </td>
+
+        <!-- Last Updated -->
+        <td data-title="'Last Updated'">{{workflow.lastUpdated}}</td>
+    </tr>
+    </table>
+
+    <div class='legend'>
+        <img src="images/green_circle.png"> Online
+        <img src="images/yellow_circle.png"> Checking
+        <img src="images/red_circle.png"> Offline
+    </div>
+
+
+</div>
