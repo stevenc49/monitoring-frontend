@@ -13,7 +13,8 @@
 
 
         <!-- Status -->
-        <td data-title="'Status'" ng-switch='workflow.status'>
+        <td data-title="'Status'" ng-switch='workflow.status' style="text-align: left">
+          
           <div ng-switch-when='OK'>
             <img src="images/green_circle.png">
           </div>
@@ -26,7 +27,11 @@
         </td>
 
         <!-- Last Updated -->
-        <td data-title="'Last Updated'">{{workflow.lastUpdated}}</td>
+        <td data-title="'Last Updated'" style="text-align: left">{{workflow.lastUpdated}}</td>
+
+        <!-- Duration -->
+        <td data-title="'Duration'" style="text-align: left">{{workflow.duration}}</td>
+
     </tr>
     </table>
 
@@ -35,6 +40,5 @@
         <img src="images/yellow_circle.png"> Checking
         <img src="images/red_circle.png"> Offline
     </div>
-
 
 </div>

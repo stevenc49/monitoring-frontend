@@ -91,10 +91,22 @@ body {
   }
 }
 
-.td {
+/* alignment */
+div.ng-scope.ng-binding {
+  text-align: left;
+}
+
+div.ng-scope.ng-binding[2] {
   text-align: center;
 }
 
+.td {
+  text-align: left;
+}
+
+
+
+/* pager */
 .ng-table-pager {
     display: none;
 }
