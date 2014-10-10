@@ -81,18 +81,22 @@
     <!-- endbuild -->
 
 
-    <!-- socket-io -->
+    <!-- socket-io client -->
     <script src="scripts/socket.io.js"></script>
     <script>
       var socket = io.connect('http://localhost:3000');
+
       socket.on('connect', function(){
         socket.on('event', function(data){});
       });
       
-      socket.on('update', function(msg){
-        console.log('payload: ' + msg);
+      socket.on('connected', function(msg){
+        console.log('connected: ' + msg);
       });
-
+      
+      socket.on('broadcast', function(msg){
+        console.log('broadcast: ' + msg);
+      });
 
     </script>
 
