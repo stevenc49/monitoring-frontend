@@ -54,10 +54,16 @@ angular.module('epermitjsApp')
         console.log('connected: ' + msg);
     });
 
-    socket.on('broadcast', function(msg){
-        console.log('broadcast: ' + msg);
-        console.log(JSON.stringify($scope.workflows[0]));
-        $scope.workflows[0].duration = Math.random();
+    socket.on('start', function(msg){
+        console.log('start: ' + msg);
+        //console.log(JSON.stringify($scope.workflows[0]));
+        //$scope.workflows[0].duration = Math.random();
+    });
+
+    socket.on('end', function(msg){
+        console.log('end: ' + msg);
+        //console.log(JSON.stringify($scope.workflows[0]));
+        //$scope.workflows[0].duration = Math.random();
     });
 
 
