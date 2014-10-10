@@ -10,7 +10,7 @@
 angular.module('epermitjsApp')
 
   .factory('socket', function ($rootScope) {
-    var socket = io.connect();
+
   })
 
   .controller('WorkflowsCtrl', function ($scope) {
@@ -38,6 +38,8 @@ angular.module('epermitjsApp')
             duration: '14 seconds'
         }
     ];
+
+
 
     ///////////////////////
     //  socket.io updates
