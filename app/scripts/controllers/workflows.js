@@ -61,9 +61,8 @@ angular.module('epermitjsApp')
     });
 
     socket.on('end', function(msg){
-        console.log('end: ' + msg);
-        //console.log(JSON.stringify($scope.workflows[0]));
-        //$scope.workflows[0].duration = Math.random();
+        console.log('end: ' + msg + " " + JSON.stringify($scope.workflows[0]));
+        $scope.workflows[0].duration = Math.random();
     });
 
 
