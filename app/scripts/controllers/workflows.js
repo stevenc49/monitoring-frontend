@@ -17,7 +17,7 @@ angular.module('epermitjsApp')
 
     $scope.workflows = [
         {
-            name: 'express1asdfasfasfsa',
+            name: 'express1',
             url: 'http://localhost:3000/workflows/good.json',
             status: 'NOK',
             lastUpdated: '2014-10-03',
@@ -39,4 +39,26 @@ angular.module('epermitjsApp')
         }
     ];
 
+    ///////////////////////
+    //  socket.io updates
+    ///////////////////////
+    var socket = io.connect('http://localhost:3000');
+
+    socket.on('connect', function(){
+        socket.on('event', function(data){});
+    });
+
+    socket.on('connected', function(msg){
+        console.log('connected: ' + msg);
+    });
+
+    socket.on('broadcast', function(msg){
+        console.log('broadcast: ' + msg);
+        console.log(JSON.stringify($scope.workflows[0]));
+        $scope.workflows[0].duration = Math.random();
+    });
+
+
   });
+
+
